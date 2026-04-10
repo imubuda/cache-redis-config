@@ -1,0 +1,30 @@
+{
+  "status": "healthy",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "components": {
+    "redis": {
+      "status": "healthy",
+      "connection": {
+        "host": "redis.example.com",
+        "port": 6379,
+        "connected": true
+      },
+      "metrics": {
+        "uptime_in_seconds": 3600,
+        "connected_clients": 10,
+        "memory_used": 1048576,
+        "evicted_keys": 0
+      }
+    },
+    "cache_service": {
+      "status": "healthy",
+      "version": "1.2.3",
+      "dependencies": [
+        "redis"
+      ]
+    }
+  },
+  "details": {
+    "message": "Cache service is operational."
+  }
+}
